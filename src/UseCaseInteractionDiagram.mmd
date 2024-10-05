@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant User
+    participant System
+
+    User ->> System: 查看代码
+    System -->> User: 显示代码
+
+    User ->> System: 观看执行动画
+    System -->> User: 显示动画
+
+    User ->> System: 访问学习资源
+    System -->> User: 显示资源
+
+    User ->> System: 编写代码
+    User ->> System: 提交代码检查
+    System -->> User: 等待评估
+    System ->> GPT: 调用GPT接口
+    GPT -->> System: 判断代码符合性
+    System -->> User: 获取评估结果
+    System -->> User: 接收反馈
+    System -->> User: 逻辑修改建议
